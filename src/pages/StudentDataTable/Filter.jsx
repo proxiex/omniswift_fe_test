@@ -9,7 +9,12 @@ import {
 
 const { Option } = Select;
 
-const Filter = () => {
+const Filter = ({
+    levels,
+    ages,
+    states,
+    gender
+}) => {
   return (
     <div className="filter">
         <p>Filter Student Table By: </p>
@@ -22,17 +27,11 @@ const Filter = () => {
                         <Select
                         style={{ width: "100%" }}
                         size='large'
-                        showSearch
                         onChange={() => {}}
-                        placeholder='Select'>
-                        {[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled' },
-                        ].map((item) => (
-                            <Option key={item.value} className='option'>
-                            {item.label}
+                        placeholder='Select age'>
+                        {ages.map((item) => (
+                            <Option key={item.id} className='option'>
+                            {item.age}
                             </Option>
                         ))}
                         </Select>
@@ -41,22 +40,18 @@ const Filter = () => {
 
                 <Col span={8}>
                     <Form.Item
-                        name='age'
+                        name='state'
                     >
                         <Select
-                        style={{ width: "100%" }}
-                        size='large'
-                        showSearch
-                        onChange={() => {}}
-                        placeholder='Select'>
-                        {[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled' },
-                        ].map((item) => (
-                            <Option key={item.value} className='option'>
-                            {item.label}
+                            style={{ width: "100%" }}
+                            size='large'
+                            showSearch={true}
+                            onChange={() => {}}
+                            placeholder='Select state'
+                        >
+                        {states.map((item) => (
+                            <Option key={item.id} className='option'>
+                            {item.name}
                             </Option>
                         ))}
                         </Select>
@@ -65,22 +60,17 @@ const Filter = () => {
 
                 <Col span={8}>
                     <Form.Item
-                        name='age'
+                        name='level'
                     >
                         <Select
                         style={{ width: "100%" }}
                         size='large'
-                        showSearch
                         onChange={() => {}}
-                        placeholder='Select'>
-                        {[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled' },
-                        ].map((item) => (
-                            <Option key={item.value} className='option'>
-                            {item.label}
+                        placeholder='Select level'>
+                            <Option></Option>
+                        {levels.map((item) => (
+                            <Option key={item.id} className='option'>
+                            {item.level}
                             </Option>
                         ))}
                         </Select>
@@ -90,22 +80,17 @@ const Filter = () => {
             <Row gutter={16} style={{ marginTop: "2%"}} >
                 <Col span={8}>
                     <Form.Item
-                        name='age'
+                        name='gender'
                     >
                         <Select
                         style={{ width: "100%" }}
                         size='large'
                         showSearch
                         onChange={() => {}}
-                        placeholder='Select'>
-                        {[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                            { value: 'disabled', label: 'Disabled' },
-                        ].map((item) => (
-                            <Option key={item.value} className='option'>
-                            {item.label}
+                        placeholder='Select gender'>
+                        {gender.map((item) => (
+                            <Option key={item.id} className='option'>
+                            {item.gender}
                             </Option>
                         ))}
                         </Select>
@@ -114,7 +99,7 @@ const Filter = () => {
 
                 <Col lg={8}>
                     <Button
-                        style={{ width: "100%", background: 'red' }}
+                        style={{ width: "100%" }}
                         size='large'
                         showSearch
                         onChange={() => {}}

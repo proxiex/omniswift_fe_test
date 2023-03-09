@@ -1,0 +1,83 @@
+.container {
+    width: 85%;
+    margin: auto;
+    padding-top: 67px;
+    padding-left: 78px;
+
+    .ant-btn:hover,
+    .ant-btn:focus {
+        border: 0;
+    }
+    .ant-btn:hover {
+        background: #3ca851;
+    }
+    .ant-btn:active {
+        color: white;
+    }
+    .ant-btn {
+        background-color: #46C35F;
+        // border-radius: 4px;
+        color: #fff;
+    }
+    .title-text {
+        p {
+            font-family: 'Lato';
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 48px;
+            letter-spacing: 0.75px;
+            text-align: left;
+            color: #343434;
+        }
+    }
+
+    .filter {
+        height: 336px;
+        background: #FFFFFF;
+        padding: 28px 50px;
+        
+        p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.1px;
+
+            color: #616161;
+        }
+    }
+
+    .table  {
+        background-color: #FFFFFF;
+        margin-top: 5%;
+        height: 513px;
+        overflow: auto;
+        padding: 50px;
+
+        &::-webkit-scrollbar {
+            width: 24px;
+          }
+          
+          /* Track */
+          &::-webkit-scrollbar-track {
+            // background: #f1f1f1; 
+            background: #F8F8F8;
+          }
+           
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #46C35F;
+            width: 10px;
+            border-radius: 100px;
+            border: 7px solid #F8F8F8;
+          }
+          
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: #3ca851; 
+          }
+    }
+}

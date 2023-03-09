@@ -4,10 +4,12 @@ import './styles/App.less';
 
 import Routes from './routes'
 
-const App = () => (
+const App = () => {
+  console.log('--- mount app.js ---')
+  return (
   <div className="app-wrapper">
     <Routes />
   </div>
-);
+)};
 
 export default App;

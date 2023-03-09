@@ -4,7 +4,7 @@ import {  Button } from 'antd'
 
 import "./styles.less"
 
-const TableContainer = () => {
+const TableContainer = ({ data }) => {
 
     const columns = [
         {
@@ -16,11 +16,13 @@ const TableContainer = () => {
           title: 'Surname',
           dataIndex: 'surname',
           key: 'surname',
+          render: (data) => <p style={{ textTransform: 'capitalize'}}>{data}</p>
         },
         {
           title: 'First Name',
-          dataIndex: 'firstName',
-          key: 'firstName',
+          dataIndex: 'firstname',
+          key: 'firstname',
+          render: (data) => <p style={{ textTransform: 'capitalize'}}>{data}</p>
         },
         {
           title: 'Age',
@@ -31,6 +33,7 @@ const TableContainer = () => {
           title: 'Gender',
           dataIndex: 'gender',
           key: 'gender',
+          render: (data) => <p style={{ textTransform: 'capitalize'}}>{data}</p>
         },
         {
           title: 'Level',
@@ -50,112 +53,10 @@ const TableContainer = () => {
         },
       ];
 
-      const data = [
-        {
-          id: '1',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '2',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '3',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '4',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '5',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '6',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '7',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '8',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '9',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-        {
-          id: '10',
-          surname: "Longshak",
-          firstName: 'Sonia',
-          age: 17,
-          gender: 'Female',
-          level: '200',
-          state: 'Plateau',
-          action: 'Download'
-        },
-      ];
-      
+      console.log(data, '<<<<')
   return (
     <div className="table">
-        <Table data={data} columns={columns} />
+        <Table data={data?.students} columns={columns} />
     </div>
   )
 }

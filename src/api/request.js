@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://44.200.59.57/api/v1";
+const baseURL = "https://test.omniswift.com.ng/api/";
 
 let customAxios = axios.create({
   baseURL,

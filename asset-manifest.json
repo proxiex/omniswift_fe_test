@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/omniswift_fe_test/build/static/css/main.56cd57cc.css",
-    "main.js": "/omniswift_fe_test/build/static/js/main.9a423407.js",
-    "static/js/703.50fcc800.chunk.js": "/omniswift_fe_test/build/static/js/703.50fcc800.chunk.js",
-    "static/js/598.1d1078a4.chunk.js": "/omniswift_fe_test/build/static/js/598.1d1078a4.chunk.js",
-    "static/js/787.5038b488.chunk.js": "/omniswift_fe_test/build/static/js/787.5038b488.chunk.js",
-    "static/media/Lato-Regular.ttf": "/omniswift_fe_test/build/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
-    "index.html": "/omniswift_fe_test/build/index.html",
-    "main.56cd57cc.css.map": "/omniswift_fe_test/build/static/css/main.56cd57cc.css.map",
-    "main.9a423407.js.map": "/omniswift_fe_test/build/static/js/main.9a423407.js.map",
-    "703.50fcc800.chunk.js.map": "/omniswift_fe_test/build/static/js/703.50fcc800.chunk.js.map",
-    "598.1d1078a4.chunk.js.map": "/omniswift_fe_test/build/static/js/598.1d1078a4.chunk.js.map",
-    "787.5038b488.chunk.js.map": "/omniswift_fe_test/build/static/js/787.5038b488.chunk.js.map"
+    "main.css": "/omniswift_fe_test/static/css/main.21648d2e.css",
+    "main.js": "/omniswift_fe_test/static/js/main.e92d71c9.js",
+    "static/js/703.50fcc800.chunk.js": "/omniswift_fe_test/static/js/703.50fcc800.chunk.js",
+    "static/js/598.1d1078a4.chunk.js": "/omniswift_fe_test/static/js/598.1d1078a4.chunk.js",
+    "static/js/787.5038b488.chunk.js": "/omniswift_fe_test/static/js/787.5038b488.chunk.js",
+    "static/media/Lato-Regular.ttf": "/omniswift_fe_test/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
+    "index.html": "/omniswift_fe_test/index.html",
+    "main.21648d2e.css.map": "/omniswift_fe_test/static/css/main.21648d2e.css.map",
+    "main.e92d71c9.js.map": "/omniswift_fe_test/static/js/main.e92d71c9.js.map",
+    "703.50fcc800.chunk.js.map": "/omniswift_fe_test/static/js/703.50fcc800.chunk.js.map",
+    "598.1d1078a4.chunk.js.map": "/omniswift_fe_test/static/js/598.1d1078a4.chunk.js.map",
+    "787.5038b488.chunk.js.map": "/omniswift_fe_test/static/js/787.5038b488.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56cd57cc.css",
-    "static/js/main.9a423407.js"
+    "static/css/main.21648d2e.css",
+    "static/js/main.e92d71c9.js"
   ]
 }

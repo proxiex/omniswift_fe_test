@@ -6,6 +6,7 @@ import { loadingType } from '../../constants/loading'
 export const initialState = { 
     loading: loadingType.idle,
     allData: [],
+    singleData: {},
     error: null
 }
 
@@ -17,10 +18,10 @@ const allDataSlice = createSlice({
             state.loading = action.payload
         },
         getAllData(state, action) {
-          state.allData = action.payload  
+          state.allData = action.payload?.data
         },
         filterAllData(state, action) {
-            state.allData = action.payload
+            state.allData = action.payload?.data || []
         },
         viewResults(state, action) {
             state.singleData = action.payload

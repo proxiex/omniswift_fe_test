@@ -17,7 +17,7 @@ const levelsSlice = createSlice({
             state.loading = action.payload
         },
         getAllLevels(state, action) {
-          state.levels = action.payload  
+          state.levels = action.payload?.data 
         },
         error(state, action) {
             state.error = action.payload?.message || "An error occurred, please try again later."

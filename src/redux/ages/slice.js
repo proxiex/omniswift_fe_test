@@ -17,7 +17,7 @@ const agesSlice = createSlice({
             state.loading = action.payload
         },
         getAllAges(state, action) {
-          state.ages = action.payload  
+          state.ages = action.payload?.data
         },
         error(state, action) {
             state.error = action.payload?.message || "An error occurred, please try again later."

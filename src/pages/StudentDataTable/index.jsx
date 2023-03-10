@@ -27,7 +27,7 @@ const StudentDataTable = () => {
     ages: { ages },
     states: { states },
     gender: { gender },
-    allData: { allData }
+    allData: { allData, loading }
   } = useAppSelector(state => state)
 
   return (
@@ -41,7 +41,7 @@ const StudentDataTable = () => {
           states={states}
           gender={gender}
         />
-        <DataTable data={allData} />
+        <DataTable loading={loading} data={allData} />
     </div>
   )
 }

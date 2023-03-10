@@ -17,7 +17,7 @@ const genderSlice = createSlice({
             state.loading = action.payload
         },
         getAllGender(state, action) {
-          state.gender = action.payload  
+          state.gender = action.payload?.data
         },
         error(state, action) {
             state.error = action.payload?.message || "An error occurred, please try again later."

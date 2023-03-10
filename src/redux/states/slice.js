@@ -17,7 +17,7 @@ const statesSlice = createSlice({
             state.loading = action.payload
         },
         getAllStates(state, action) {
-          state.states = action.payload  
+          state.states = action.payload?.data
         },
         error(state, action) {
             state.error = action.payload?.message || "An error occurred, please try again later."

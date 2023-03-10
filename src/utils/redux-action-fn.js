@@ -6,7 +6,7 @@ export const actionFn = (loaderFn, reqFn, sliceFn, error, data={}) => {
         try {
           dispatch(loaderFn(loadingType.loading));
           const response = await reqFn(data);
-          dispatch(sliceFn(response?.data?.data));
+          dispatch(sliceFn(response?.data));
           dispatch(loaderFn(loadingType.complete));
         } catch (err) {
           if (axios.isAxiosError(err)) {

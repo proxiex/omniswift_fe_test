@@ -19,7 +19,7 @@ const filterDataRequest = (data) =>
   request({ url: "/filterData", data, method: 'post' });
 
 const viewResultRequest = (data) =>
-  request({ url: `/viewResult/${data.id}`, data });
+  request({ url: `/viewResult/${data.id}`, data, method: 'post' });
 
 export {
   getAllLevelsRequest,

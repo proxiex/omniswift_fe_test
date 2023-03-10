@@ -1,10 +1,22 @@
 import React from 'react'
 import Table from "../../components/Table"
 import {  Button } from 'antd'
+import { useNavigate } from "react-router-dom";
+
+import { useAppDispatch } from '../../hooks/redux-hooks'
+import { viewResultActon } from '../../redux/allData/action'
 
 import "./styles.less"
 
-const TableContainer = ({ data }) => {
+const TableContainer = ({ data, loading }) => {
+
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+
+    const loadResults = (id) => {
+      dispatch(viewResultActon({ id }))
+      return navigate("/result")
+    }
 
     const columns = [
         {
@@ -47,16 +59,13 @@ const TableContainer = ({ data }) => {
         },
         {
           title: 'Action',
-          dataIndex: 'action',
-          key: 'action',
-          render: (text) => <Button>Download Result</Button>,
+          render: (data) => <Button onClick={() => loadResults(data?.id)}>Download Result</Button>,
         },
-      ];
+    ];
 
-      console.log(data, '<<<<')
   return (
     <div className="table">
-        <Table data={data?.students} columns={columns} />
+        <Table data={data?.students} loading={loading} columns={columns} />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {  useState } from 'react'
 import {
     Button,
     Form,
@@ -6,6 +6,10 @@ import {
     Row,
     Col
 } from 'antd';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks'
+import { filterAllDataAction } from '../../redux/allData/action'
+import { loadingType } from '../../constants/loading'
+
 
 const { Option } = Select;
 
@@ -15,6 +19,22 @@ const Filter = ({
     states,
     gender
 }) => {
+
+    const [filterData, setFilterDAta] = useState({})
+
+    const dispatch = useAppDispatch()
+    const { loading } = useAppSelector(state => state.allData)
+
+    const onSelect = (data, name) => {
+        setFilterDAta({...filterData, [name]: data})
+    }
+
+    const filter = () => {
+        if (Object.keys(filterData)){
+            dispatch(filterAllDataAction(filterData))
+        }
+    }
+
   return (
     <div className="filter">
         <p>Filter Student Table By: </p>
@@ -27,10 +47,10 @@ const Filter = ({
                         <Select
                         style={{ width: "100%" }}
                         size='large'
-                        onChange={() => {}}
+                        onChange={(data) => onSelect(data, 'age')}
                         placeholder='Select age'>
                         {ages.map((item) => (
-                            <Option key={item.id} className='option'>
+                            <Option key={item.id} value={item.age} className='option'>
                             {item.age}
                             </Option>
                         ))}
@@ -46,11 +66,11 @@ const Filter = ({
                             style={{ width: "100%" }}
                             size='large'
                             showSearch={true}
-                            onChange={() => {}}
+                            onChange={(data) => onSelect(data, 'state')}
                             placeholder='Select state'
                         >
                         {states.map((item) => (
-                            <Option key={item.id} className='option'>
+                            <Option key={item.id} value={item.name} className='option'>
                             {item.name}
                             </Option>
                         ))}
@@ -65,11 +85,11 @@ const Filter = ({
                         <Select
                         style={{ width: "100%" }}
                         size='large'
-                        onChange={() => {}}
+                        onChange={(data) => onSelect(data, 'level')}
                         placeholder='Select level'>
                             <Option></Option>
                         {levels.map((item) => (
-                            <Option key={item.id} className='option'>
+                            <Option key={item.id} value={item.level} className='option'>
                             {item.level}
                             </Option>
                         ))}
@@ -86,10 +106,10 @@ const Filter = ({
                         style={{ width: "100%" }}
                         size='large'
                         showSearch
-                        onChange={() => {}}
+                        onChange={(data) => onSelect(data, 'gender')}
                         placeholder='Select gender'>
                         {gender.map((item) => (
-                            <Option key={item.id} className='option'>
+                            <Option key={item.id} value={item.gender} className='option'>
                             {item.gender}
                             </Option>
                         ))}
@@ -102,10 +122,10 @@ const Filter = ({
                         style={{ width: "100%" }}
                         size='large'
                         showSearch
-                        onChange={() => {}}
+                        onClick={filter}
                         placeholder='Select'
                     >
-                        Search
+                        { loading === loadingType.loading ? "Searching..." : "Search"}
                     </Button>
                 </Col>
             </Row>

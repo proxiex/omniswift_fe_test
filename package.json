@@ -1,7 +1,6 @@
 {
   "name": "omniswift_fe_test",
   "version": "0.1.0",
-  "homepage": "https://proxiex.github.io/omniswift_fe_test",
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.0.0",
